@@ -10,7 +10,9 @@ import ArticlePreview from '../components/article-preview'
 const RootIndex = ({ data }) => {
 	return (
 		<Layout>
-			<pre>{JSON.stringify(data, null, 4)}</pre>
+			<div>
+				<pre>{JSON.stringify(data, null, 4)}</pre>
+			</div>
 		</Layout>
 	)
 }
