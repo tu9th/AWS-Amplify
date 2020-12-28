@@ -6,17 +6,24 @@ import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
-class RootIndex extends React.Component {
-  render() {
 
-    return (
-      <Layout>
-        <div style={{ background: '#fff' }}>
-          <p>Home Page</p>
-        </div>
-      </Layout>
-    )
-  }
+const RootIndex = ({ data }) => {
+	return (
+		<Layout>
+			<pre>{JSON.stringify(data, null, 4)}</pre>
+		</Layout>
+	)
 }
+
+export const query = graphql`
+  {
+    allContentfulHome(filter: {title: {eq: "Home-test"}}) {
+      nodes {
+        title
+        description
+      }
+    }
+  }
+`
 
 export default RootIndex
