@@ -23,7 +23,9 @@ export const query = graphql`
       nodes {
         title
         description
-        content
+        content {
+	       content
+	    }
       }
     }
   }
