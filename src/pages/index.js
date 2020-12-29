@@ -11,7 +11,9 @@ const RootIndex = ({ data }) => {
 	return (
 		<Layout>
 			<div>
-				<pre>{JSON.stringify(data, null, 4)}</pre>
+				<p>
+					<pre>{JSON.stringify(data, null, 4)}</pre>
+				</p>
 			</div>
 		</Layout>
 	)
