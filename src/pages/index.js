@@ -11,6 +11,7 @@ const RootIndex = ({ data }) => {
 	return (
 		<Layout>
 			<div>
+		    <p>H1</p>
 				<p>
 					<pre>{JSON.stringify(data, null, 4)}</pre>
 				</p>
